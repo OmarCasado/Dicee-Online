@@ -1,0 +1,58 @@
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Caveat Brush', cursive;
+}
+
+.btn:hover {
+  background-color:#4ECCA3;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #393E46;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Caveat Brush', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Caveat Brush', cursive;
+}
+
+img {
+  width: 70%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
