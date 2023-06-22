@@ -17,12 +17,44 @@ function rollTheDices() {
     document.querySelector(".img1").setAttribute("src", imagesArray1[randomImage1]); 
     document.querySelector(".img2").setAttribute("src", imagesArray2[randomImage2]); 
 
+
+
+    /* CHANGE THE IMAGES AT INTERVALS CODE */
+
+    var interval = 100; // Interval in milliseconds 
+    var duration = 3000; // Duration in milliseconds
+    var startTime = Date.now();
+
+    var diceInterval = setInterval(function() {
+    var elapsedTime = Date.now() - startTime;
+
+    if (elapsedTime >= duration) {
+        clearInterval(diceInterval);
+        finalizeResult();
+    } else {
+        var randomImage1 = Math.floor(Math.random() * imagesArray1.length);
+        var randomImage2 = Math.floor(Math.random() * imagesArray2.length);
+        document.querySelector(".img1").setAttribute("src", imagesArray1[randomImage1]);
+        document.querySelector(".img2").setAttribute("src", imagesArray2[randomImage2]);
+    }
+    }, interval);
+
+    function finalizeResult() {
+        var randomImage1 = Math.floor(Math.random() * imagesArray1.length);
+        var randomImage2 = Math.floor(Math.random() * imagesArray2.length);
+        document.querySelector(".img1").setAttribute("src", imagesArray1[randomImage1]);
+        document.querySelector(".img2").setAttribute("src", imagesArray2[randomImage2]);
+
+
+    /* SELECT AND PRINT THE WINNER */
+
     if (randomImage1 > randomImage2) {
         document.querySelector("h1").textContent = player1 + " Wins!";
     } else if (randomImage1 < randomImage2) {
         document.querySelector("h1").textContent = player2 + " Wins!";
     } else if (randomImage1 === randomImage2) {
         document.querySelector("h1").textContent = "Draw. Try again!";
+    } 
     }
 }
 
